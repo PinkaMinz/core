@@ -6,11 +6,11 @@ USER gitpod
 # For example, the command below would install "bastet" - a command line tetris clone:
 #
 RUN apt-get -q update && \
-    apt-get install -yq curl apt-transport-https ca-certificates \
-    curl -sL https://deb.nodesource.com/setup_8.x |  -E bash - \
-    apt-get install -y nodejs \
-    npm install -g npm \
-    npm install -g grunt-cli \
+    apt-get install -yq curl apt-transport-https ca-certificates  && \
+    curl -sL https://deb.nodesource.com/setup_8.x |  -E bash - && \
+    apt-get install -y nodejs  && \
+    npm install -g npm  && \
+    npm install -g grunt-cli  && \
     apt-get install --force-yes -yq \
     wget \
     build-essential \
@@ -28,7 +28,7 @@ RUN apt-get -q update && \
     qt5-default  \
     p7zip-full \
     git \
-    subversion \
+    subversion && \
 
     rm -rf /var/lib/apt/lists/*
 #
