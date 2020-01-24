@@ -5,13 +5,13 @@ USER gitpod
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
 #
-RUN apt-get -q update && \
-    apt-get install -yq curl apt-transport-https ca-certificates  && \
-    curl -sL https://deb.nodesource.com/setup_8.x |  -E bash - && \
-    apt-get install -y nodejs  && \
+RUN sudo apt-get -q update && \
+    sudo apt-get install -yq curl apt-transport-https ca-certificates  && \
+    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - && \
+    sudo apt-get install -y nodejs  && \
     npm install -g npm  && \
     npm install -g grunt-cli  && \
-    apt-get install --force-yes -yq \
+    sudo apt-get install --force-yes -yq \
     wget \
     build-essential \
     libcurl4-gnutls-dev \
