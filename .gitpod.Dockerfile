@@ -30,6 +30,5 @@ RUN sudo apt-get -q update && \
     git \
     subversion && \
 
-    rm -rf /var/lib/apt/lists/*
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
