@@ -28,7 +28,7 @@ RUN sudo apt-get -q update && \
     qt5-default  \
     p7zip-full \
     git \
-    subversion && \
+    subversion 
 
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
